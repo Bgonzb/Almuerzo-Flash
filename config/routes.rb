@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  
   get 'registrar/usuarios'
-
   get 'login/logueo'
-
   get 'welcome/index'
+
+  get 'principal', to: 'welcome#index'
+  get 'login', to: 'login#logueo'
+  get 'registrarse', to: 'registrar#usuarios'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
