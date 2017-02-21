@@ -11,29 +11,31 @@
     </div>
   <% end %>
 
-<div class="container">
+<!-- Formulario de creacion de menu -->
+<div class="form-group">
   <div class="field">
     <%= f.label :foto %><br>
-    <%= f.text_field :foto %>
+    <%= f.text_field :foto , :class => 'form-control', :placeholder => 'Url del Almuerzo' %>
   </div>
   <div class="field">
     <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, :class => 'form-control', :placeholder => 'Nombre del Almuerzo' %>
   </div>
   <div class="field">
     <%= f.label :descripcion %><br>
-    <%= f.text_field :descripcion %>
+    <%= f.text_area :descripcion, :class => 'form-control', :placeholder => 'Descripcion del Almuerzo'%>
   </div>
   <div class="field">
     <%= f.label :precio %><br>
-    <%= f.number_field :precio %>
+    <%= f.number_field :precio, :class => 'form-control',:placeholder => 'Precio del Almuerzo' %>
   </div>
   <div class="field">
     <%= f.label :stock %><br>
-    <%= f.number_field :stock %>
+    <%= f.number_field :stock, :class => 'form-control', :placeholder => 'Stock del Almuerzo' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear", :class =>' btn btn-primary' %>
   </div>
-</div>  
+</div>
+
 <% end %>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'registrar/usuarios'
   get 'login/logueo'
   get 'welcome/index'
+  
 
   get 'principal', to: 'welcome#index'
   get 'login', to: 'login#logueo'

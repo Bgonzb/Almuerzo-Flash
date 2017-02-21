@@ -12,9 +12,9 @@
        <div class= "thumbnail">
         <h2> <%= almuerzo.nombre %> </h2>
         <%= image_tag(almuerzo.foto, :class => 'img-responsive') %>
-        <p> <%= almuerzo.descripcion %> </p>
-        <p> Precio: $<%= almuerzo.precio %> </p>
-        <p> Stock: <%= almuerzo.stock %> unidades </p>
+        <p> <strong> Menú: </strong> <%= almuerzo.descripcion %> </p>
+        <p> <strong> Precio: </strong> $<%= almuerzo.precio %> </p>
+        <p> <strong> Stock: </strong> <%= almuerzo.stock %> unidades </p>
           <button type="button" class="btn"> 
             <%= link_to 'Show', almuerzo %>
           </button>  

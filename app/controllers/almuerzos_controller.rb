@@ -28,7 +28,7 @@ class AlmuerzosController < ApplicationController
 
     respond_to do |format|
       if @almuerzo.save
-        format.html { redirect_to @almuerzo, notice: 'Almuerzo was successfully created.' }
+        format.html { redirect_to @almuerzo, notice: 'Almuerzo creado con exito.' }
         format.json { render :show, status: :created, location: @almuerzo }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AlmuerzosController < ApplicationController
   def update
     respond_to do |format|
       if @almuerzo.update(almuerzo_params)
-        format.html { redirect_to @almuerzo, notice: 'Almuerzo was successfully updated.' }
+        format.html { redirect_to @almuerzo, notice: 'Almuerzo actualizado con exito.' }
         format.json { render :show, status: :ok, location: @almuerzo }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AlmuerzosController < ApplicationController
   def destroy
     @almuerzo.destroy
     respond_to do |format|
-      format.html { redirect_to almuerzos_url, notice: 'Almuerzo was successfully destroyed.' }
+      format.html { redirect_to almuerzos_url, notice: 'Almuerzo eliminado con exito.' }
       format.json { head :no_content }
     end
   end
