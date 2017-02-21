@@ -1,5 +1,7 @@
 class AlmuerzosController < ApplicationController
   before_action :set_almuerzo, only: [:show, :edit, :update, :destroy]
+  # filtrando contenido al usario
+  before_filter :authenticate_user!, except:[ :index ]
 
   # GET /almuerzos
   # GET /almuerzos.json

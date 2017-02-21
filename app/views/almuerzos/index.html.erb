@@ -15,6 +15,8 @@
         <p> <strong> Menú: </strong> <%= almuerzo.descripcion %> </p>
         <p> <strong> Precio: </strong> $<%= almuerzo.precio %> </p>
         <p> <strong> Stock: </strong> <%= almuerzo.stock %> unidades </p>
+          <!-- Validando botones  -->
+          <% if user_signed_in? %> 
           <button type="button" class="btn"> 
             <%= link_to 'Show', almuerzo %>
           </button>  
@@ -24,12 +26,16 @@
           <button type="button" class="btn">
             <%= link_to 'Eliminar Menú', almuerzo, method: :delete, data: { confirm: 'Estas seguro?' } %>
           </button>
+          <% end %>
+
      </div>
     </div>       
 
     <% end %>
 <br>
-
+  <!-- validando botones  -->
+  <% if user_signed_in? %> 
   <button type="button" class="btn"> 
     <%= link_to 'Crear nuevo Almuerzo', new_almuerzo_path %>
-  </button>  
+  </button>
+  <% end %> 
