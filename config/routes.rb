@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :almuerzos
   get 'registrar/usuarios'
   get 'login/logueo'
   get 'welcome/index'
