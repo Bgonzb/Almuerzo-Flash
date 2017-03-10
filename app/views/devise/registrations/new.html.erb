@@ -38,7 +38,7 @@
 
           <div class="form-group">
             <div class="field">
-              <%= f.label :password %>
+              <%= f.label :contraseña %>
               <% if @minimum_password_length %>
               <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %><br />
@@ -48,7 +48,7 @@
 
           <div class="form-group">
             <div class="field">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :confirme_contraseña %><br />
               <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control'  %>
             </div>
           </div>  

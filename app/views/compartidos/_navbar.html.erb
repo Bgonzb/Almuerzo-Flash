@@ -2,6 +2,10 @@
 <ul class="nav nav-pills">
 	<li role="presentation"><a href='<%=root_path=%>'>Inicio</a></li>
   <li role="presentation"><a href='<%=almuerzos_path=%>'>Almuerzos</a></li>
+  <% if user_signed_in? %> 
+  <li role="presentation"><a href="<%= edit_user_registration_path%>">Perfil</a></li>
+  <% end %>
+
 	<!-- Navbar pills Al lado derecho  -->
   <ul class="nav nav-pills navbar-right">
 			<!-- if login y logout  -->
